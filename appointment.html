@@ -93,6 +93,27 @@
 
 
         <!-- Appointment Start -->
+        <style>
+            .form-floating label {
+                position: absolute;
+                pointer-events: none;
+                transform-origin: top left;
+                transform: translateY(-1.5rem) scale(1);
+                transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+            }
+    
+            .form-floating input,
+            .form-floating textarea {
+                padding: 1rem;
+            }
+    
+            .form-floating input:focus + label,
+            .form-floating textarea:focus + label,
+            .form-floating input:not(:placeholder-shown) + label,
+            .form-floating textarea:not(:placeholder-shown) + label {
+                transform: translateY(0) scale(0.8);
+            }
+        </style>
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="bg-light rounded">
@@ -104,32 +125,37 @@
                                     <div class="row g-3">
                                         <div class="col-sm-6">
                                             <div class="form-floating">
-                                                <input type="text" class="form-control border-0" id="gname" placeholder="Guardian Name">
                                                 <label for="gname">Guardian Name</label>
+                                                <input type="text" class="form-control border-0" id="gname" name="name" placeholder="Guardian Name">
+                                                
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-floating">
-                                                <input type="email" class="form-control border-0" id="email" placeholder="Guardian Email">
                                                 <label for="email">Guardian Email</label>
+                                                <input type="email" class="form-control border-0" id="email" name="email" placeholder="Guardian Email">
+                                               
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-floating">
-                                                <input type="text" class="form-control border-0" id="cname" placeholder="Child Name">
                                                 <label for="cname">Child Name</label>
+                                                <input type="text" class="form-control border-0" id="cname" name="childname" placeholder="Child Name">
+                                              
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-floating">
-                                                <input type="number" class="form-control border-0" id="contact" placeholder="Contact Number">
                                                 <label for="contact">Contact Number</label>
+                                                <input type="number" class="form-control border-0" name="contact" id="contact" placeholder="Contact Number">
+                                               
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-floating">
-                                                <textarea class="form-control border-0" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
                                                 <label for="message">Message</label>
+                                                <textarea class="form-control border-0" name="message" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
+                                               
                                             </div>
                                         </div>
                                         <div class="col-12">
